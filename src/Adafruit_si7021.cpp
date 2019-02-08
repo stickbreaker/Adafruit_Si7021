@@ -24,7 +24,6 @@
 
 #define TRANSACTION_TIMEOUT 100 // Wire NAK/Busy timeout in ms
 
-
 #ifndef ARDUINO_ARCH_ESP32
  #define log_e()
 #endif 

@@ -23,7 +23,11 @@ void setup() {
   Serial.print(" Rev(");
   Serial.print(sensor.getRevision());
   Serial.print(")");
-  Serial.print(" Serial #"); Serial.print(sensor.sernum_a, HEX); Serial.println(sensor.sernum_b, HEX);
+  Serial.print(" Serial #");
+  char buff[50];
+  uint8_t len =sprintf(buff,"%08x%08x",sensor.sernum_a,sensor.sernum_b);
+  Serial.println(buff);
+
 }
 
 void loop() {
